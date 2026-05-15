@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ημερολόγιο Διατροφής</title>
+<style>
+    body {
+        font-family: 'Times New Roman', serif;
+        line-height: 1.15;
+        color: #333;
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        color: #000;
+    }
+    .mounjaro {
+        color: #2e6c80;
+        font-weight: bold;
+    }
+    .lipometrisi-title {
+        font-family: 'Arial Narrow', sans-serif;
+        font-size: 16pt;
+        margin-top: 30px;
+        border-bottom: 1px solid #ccc;
+    }
+    .lipometrisi-data {
+        font-family: 'Arial Narrow', sans-serif;
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+    .day-title {
+        font-size: 14pt;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+    .nutrition-line {
+        font-family: 'Georgia', serif;
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+    .orange-val {
+        color: orange;
+        font-family: 'Verdana', sans-serif;
+        font-weight: bold;
+    }
+    .summary-box {
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-top: 5px;
+        margin-bottom: 40px;
+        border-left: 5px solid #2e6c80;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+<h1>Ημερολόγιο Διατροφής και Λιπομετρήσεων</h1>
+
+<p>8 Απριλίου Τετάρτη - <span class="mounjaro">1η Mounjaro 2.5mg</span><br>
+15 Απριλίου Τετάρτη - <span class="mounjaro">2η Mounjaro 2.5mg</span><br>
+22 Απριλίου Τετάρτη - <span class="mounjaro">3η Mounjaro 2.5mg</span></p>
+
+<div class="lipometrisi-title">Λιπομέτρηση - 9 Απριλίου</div>
+<ul class="lipometrisi-data">
+    <li>Βάρος: 107.2kg</li>
+    <li>Fat Mass: 42.8kg</li>
+    <li>Lean Mass: 60.0kg</li>
+    <li>Skeletal Muscle: 40.5kg</li>
+    <li>Visceral Fat Index: 20</li>
+</ul>
+
+<div class="lipometrisi-title">Λιπομέτρηση - 25 Απριλίου</div>
+<ul class="lipometrisi-data">
+    <li>Βάρος: 105.3kg</li>
+    <li>Fat Mass: 42.5kg</li>
+    <li>Lean Mass: 59.3kg</li>
+    <li>Skeletal Muscle: 40.3kg</li>
+    <li>Visceral Fat Index: 20</li>
+</ul>
+
+<h3 class="day-title">28 Απριλίου Τρίτη</h3>
+<p>Γιαούρτι, βρώμη, λιναρόσπορος, 10 αμύγδαλα και μέλι<br>
+Μπανάνα<br>
+2 αυγά, 40 gr πεκορίνο και 3 ντοματίνια<br>
+Μοσχαρίσια μπριζόλα, 30 gr φέτα και πουρές<br>
+100ml ρετσίνα</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~90 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2200 kcal</span></div>
+
+<h3 class="day-title">29 Απριλίου Τετάρτη - <span class="mounjaro">4η Mounjaro 2.5mg</span></h3>
+<p>2 αυγά, 1 φέτα ψωμί, κασέρι, μανταρίνι, μπανάνα, 250ml αριάνι<br>
+Μπούτι κοτόπουλο με πατάτα και ντομάτες<br>
+1 scoop με γάλα</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~95 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2100 kcal</span></div>
+
+<h3 class="day-title">30 Απριλίου Πέμπτη</h3>
+<p>Γιαούρτι, βρώμη, λιναρόσπορος, αυγά, αγγούρι, πεκορίνο, μπανάνα, 10 αμύγδαλα<br>
+Μπριάμ με cottage και αντίδια<br>
+Τόνος με ρεβύθια<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~105 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2100 kcal</span></div>
+
+<h3 class="day-title">1 Μαΐου Παρασκευή</h3>
+<p>High protein omelette<br>
+Μισό yogurt bowl<br>
+Αρνίσια παϊδάκια και τηγανητές πατάτες<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~95 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2300 kcal</span></div>
+
+<div class="lipometrisi-title">Λιπομέτρηση - 2 Μαΐου</div>
+<ul class="lipometrisi-data">
+<li>Βάρος: 104.3kg</li>
+<li>Fat Mass: 42.3kg</li>
+<li>Lean Mass: 59.1kg</li>
+<li>Skeletal Muscle: 40.1kg</li>
+<li>Visceral Fat Index: 20</li>
+</ul>
+
+<h3 class="day-title">2 Μαΐου Σάββατο</h3>
+<p>2 αυγά, μπέικον, λουκάνικο, αριάνι, ντοματίνια<br>
+Γιαούρτι 200 gr<br>
+Κοτόπουλο με πατάτες και χόρτα<br>
+Κοτόπουλο με πέτσα</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~90 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2000 kcal</span></div>
+
+<h3 class="day-title">3 Μαΐου Κυριακή</h3>
+<p>2 αυγά, ψωμί με κασέρι, ντοματίνια<br>
+Αριάνι<br>
+Γιαούρτι με καρύδια<br>
+Γεμιστές πιπεριές με ρύζι, φέτα, σαλάτα και παγωτό<br>
+Στήθος κοτόπουλο</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~95 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2100 kcal</span></div>
+
+<h3 class="day-title">4 Μαΐου Δευτέρα</h3>
+<p>Pinsa με αυγό κασέρι γαλοπούλα<br>
+Γιαούρτι με μήλο<br>
+Γεμιστά, λάχανο σαλάτα, cottage<br>
+Γύρος σε πίτα χωρίς πατάτες</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~90 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2200 kcal</span></div>
+
+<h3 class="day-title">5 Μαΐου Τρίτη</h3>
+<p>2 αυγά, 2 wasa, 40 gr πεκορίνο, 3 ντοματίνια<br>
+Γιαούρτι με 10 αμύγδαλα<br>
+Τσιπούρα με ψωμί και σαλάτα<br>
+Γιαούρτι και 20 gr chips<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~120 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1900 kcal</span></div>
+
+<h3 class="day-title">6 Μαΐου Τετάρτη - <span class="mounjaro">1η Mounjaro 5mg</span></h3>
+<p>2 αυγά, 40 gr πεκορίνο, 1 wasa, μισή μπανάνα<br>
+Μισή μπανάνα με γιαούρτι, 10 αμύγδαλα και μέλι<br>
+Φασολάκια με λάχανο σαλάτα και ανθότυρο<br>
+Σαλάτα με τόνο, καλαμπόκι, φασόλια<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~90 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1800 kcal</span></div>
+
+<h3 class="day-title">7 Μαΐου Πέμπτη</h3>
+<p>Πρασοπιτα, γιαούρτι<br>
+Protein shake<br>
+Κεφτεδάκι με πατάτα και μπρόκολο<br>
+Κεφτεδάκι με πατάτα και μπρόκολο<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~100 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1700 kcal</span></div>
+
+<h3 class="day-title">8 Μαΐου Παρασκευή</h3>
+<p>2 αυγά, 40 gr πεκορίνο, 2 wasa, ντοματίνια<br>
+Smoothie mango ananas<br>
+Γιαούρτι<br>
+Φασολάδα με ανθότυρο<br>
+Ανθότυρο επιπλέον<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~105 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1800 kcal</span></div>
+
+<div class="lipometrisi-title">Λιπομέτρηση - 9 Μαΐου</div>
+<ul class="lipometrisi-data">
+<li>Βάρος: 103.6kg</li>
+<li>Fat Mass: 42.0kg</li>
+<li>Lean Mass: 59.0kg</li>
+<li>Skeletal Muscle: 40.1kg</li>
+<li>Visceral Fat Index: 19</li>
+</ul>
+
+<h3 class="day-title">9 Μαΐου Σάββατο</h3>
+<p>Μισή μπουγάτσα τυρί, μισή κιμά και μισή κρέμα, αριάνι<br>
+Κεφτεδάκια με πατάτες και σαλάτα<br>
+Ψύλλιο<br>
+Γιαούρτι<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~100 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2200 kcal</span></div>
+
+<h3 class="day-title">10 Μαΐου Κυριακή</h3>
+<p>2 αυγά και γιαούρτι<br>
+Κοτόπουλο με πατάτες και σαλάτα<br>
+Κινόα με τόνο, ρεβύθια και φασόλια<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~110 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2000 kcal</span></div>
+
+<h3 class="day-title">11 Μαΐου Δευτέρα</h3>
+<p>2 wasa, γραβιέρα, κεφίρ<br>
+2 αυγά και λαχανικά<br>
+Κοτόπουλο με πατάτες και μαρούλι<br>
+Γύρος σε πίτα χωρίς πατάτες</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~100 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~2100 kcal</span></div>
+
+<h3 class="day-title">12 Μαΐου Τρίτη</h3>
+<p>Γιαούρτι, λιναρόσπορος, 10 αμύγδαλα, μέλι<br>
+Κεφίρ, μικρό μήλο, wasa, τυρί<br>
+Κοτόπουλο με σαλάτα<br>
+Γιαούρτι</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~115 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1900 kcal</span></div>
+
+<h3 class="day-title">13 Μαΐου Τετάρτη</h3>
+<p>2 αυγά, 2 wasa, 40 gr padano cheese, 1/2 banana<br>
+Ρεβυθοσαλάτα με καρότο, μπρόκολο, πλιγούρι και μαρούλι, 100 gr κότατζ<br>
+250ml Arla Protein drink<br>
+Μπριζόλα μοσχαρίσια με λίγο ρύζι</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~95 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1400 kcal</span></div>
+
+<h3 class="day-title">14 Μαΐου Πέμπτη - <span class="mounjaro">2η Mounjaro 5mg</span></h3>
+<p>2 wasa, 40 gr κεφαλοτύρι, 1 ποτήρι κεφίρ<br>
+1 μικρό μήλο, 3 καρύδια, 5 αμύγδαλα<br>
+σολωμος με ρύζι (μεγάλη μερίδα) και σαλάτα μαρούλι<br>
+1 ποτήρι Arla ρόφημα</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~80 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1300 kcal</span></div>
+
+<h3 class="day-title">15 Μαΐου Παρασκευή</h3>
+<p>2 αυγά, 2 wasa, 40 gr πεκορινο<br>
+μικρό μήλο, 10 αμύγδαλα<br>
+Rio Mare Insalatissime (160g)<br>
+μικρό κομμάτι σολωμού με μια φέτα ψωμί, σαλάτα μαρούλι<br>
+1 scoop</p>
+<div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~65 gr</span></div>
+<div class="nutrition-line">Θερμίδες: <span class="orange-val">~1250 kcal</span></div>
+
+<h3 style="margin-top:40px;">Γράφημα Βάρους</h3>
+<canvas id="weightChart"></canvas>
+
+<h3 style="margin-top:40px;">Fat Mass & Skeletal Muscle</h3>
+<canvas id="bodyChart"></canvas>
+
+<script>
+const dataPoints = [
+{ date: "2025-04-09", weight: 107.2, fat: 42.8, muscle: 40.5 },
+{ date: "2025-04-25", weight: 105.3, fat: 42.5, muscle: 40.3 },
+{ date: "2025-05-02", weight: 104.3, fat: 42.3, muscle: 40.1 },
+{ date: "2025-05-09", weight: 103.6, fat: 42.0, muscle: 40.1 }
+];
+
+new Chart(document.getElementById('weightChart'), {
+type: 'line',
+data: {
+labels: dataPoints.map(d => d.date),
+datasets: [{ label: 'Βάρος', data: dataPoints.map(d => d.weight) }]
+}
+});
+
+new Chart(document.getElementById('bodyChart'), {
+type: 'line',
+data: {
+labels: dataPoints.map(d => d.date),
+datasets: [
+{ label: 'Fat Mass', data: dataPoints.map(d => d.fat) },
+{ label: 'Muscle', data: dataPoints.map(d => d.muscle) }
+]
+}
+});
+</script>
+
+</body>
+</html>
