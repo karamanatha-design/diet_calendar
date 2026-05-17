@@ -372,5 +372,48 @@ new Chart(document.getElementById('bodyChart'), {
 </script>
 
 <script src="https://static.app/js/static.js" type="text/javascript"></script>
+    <script>
+const GITHUB_TOKEN = "ΒΑΛΕ_ΕΔΩ_TOKEN";
+const OWNER = "karamanatha-design";
+const REPO = "diet_calendar";
+const FILE_PATH = "index.html";
+
+async function addHtml() {
+    const newHtml = document.getElementById("htmlInput").value;
+
+    // 1. Πάρε το current file
+    const res = await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+        headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github.v3+json"
+        }
+    });
+
+    const data = await res.json();
+    const content = atob(data.content);
+
+    // 2. Insert πριν το σχόλιο
+    const updated = content.replace(
+        "<!-- ΔΙΑΓΡΑΜΜΑΤΑ -->",
+        newHtml + "\n<!-- ΔΙΑΓΡΑΜΜΑΤΑ -->"
+    );
+
+    // 3. Commit πίσω στο GitHub
+    await fetch(`https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`, {
+        method: "PUT",
+        headers: {
+            Authorization: `Bearer ${GITHUB_TOKEN}`,
+            Accept: "application/vnd.github.v3+json"
+        },
+        body: JSON.stringify({
+            message: "Add new day entry",
+            content: btoa(unescape(encodeURIComponent(updated))),
+            sha: data.sha
+        })
+    });
+
+    alert("✔ Προστέθηκε! Περίμενε ~30 sec να ανέβει.");
+}
+</script>
 </body>
 </html>
