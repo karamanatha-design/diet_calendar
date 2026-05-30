@@ -425,7 +425,7 @@ protein pudding 200gr</p>
 <canvas id="bodyChart" style="height:300px;"></canvas>
 
 <script>
-const labels = ['9 Απρ','25 Απρ','2 Μαΐ','9 Μαΐ','16 Μαΐ','23 Μαΐ'];
+const labels = ['9 Απρ','25 Απρ','2 Μαΐ','9 Μαΐ','16 Μαΐ','23 Μαΐ','30 Μαΐ'];
 
 new Chart(document.getElementById('weightChart'), {
     type: 'line',
@@ -434,13 +434,13 @@ new Chart(document.getElementById('weightChart'), {
         datasets: [
             {
                 label: 'Βάρος (kg)',
-                data: [107.2,105.3,104.3,103.6,102.9,102],
+                data: [107.2,105.3,104.3,103.6,102.9,102,102.5],
                 borderColor: 'black',
                 tension: 0.3
             },
             {
                 label: 'Lean Mass (kg)',
-                data: [60.0,59.3,59.1,59.0,59.1,58.8],
+                data: [60.0,59.3,59.1,59.0,59.1,58.8,59],
                 borderColor: 'blue',
                 tension: 0.3
             }
@@ -468,13 +468,13 @@ new Chart(document.getElementById('bodyChart'), {
         datasets: [
             {
                 label: 'Skeletal Muscle (kg)',
-                data: [40.5,40.3,40.1,40.1,40.1,40],
+                data: [40.5,40.3,40.1,40.1,40.1,40,40.1],
                 borderColor: 'green',
                 tension: 0.3
             },
             {
                 label: 'Fat Mass (kg)',
-                data: [42.8,42.5,42.3,42.0,41.5,41.3],
+                data: [42.8,42.5,42.3,42.0,41.5,41.3,41],
                 borderColor: 'red',
                 tension: 0.3
             }
