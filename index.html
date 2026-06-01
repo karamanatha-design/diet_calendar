@@ -458,6 +458,10 @@ protein pudding (21gr πρωτεΐνη)<br/>
 
 <!-- 1 Ιουνίου -->
 
+    
+<!-- ΤΕΛΟΣ ΗΜΕΡΟΛΟΓΙΟΥ -->
+<div id="last-entry"></div>
+
 <!-- ΔΙΑΓΡΑΜΜΑΤΑ -->
   <br>
 <div class="lipometrisi-box"><div class="lipometrisi-title">Διαγράμματα</div>
@@ -539,6 +543,13 @@ new Chart(document.getElementById('bodyChart'), {
 });
 </script>
 
-
+<script>
+window.addEventListener('load', function() {
+    document.getElementById('last-entry').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+});
+</script>
 </body>
 </html>
