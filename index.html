@@ -600,16 +600,7 @@ protein pudding (20gr πρωτεΐνη)<br/>
 <div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~145 gr</span></div>
 <div class="nutrition-line">Θερμίδες: <span class="orange-val">~1650 kcal</span></div>
 
-    <div class="lipometrisi-box">
-  <div class="lipometrisi-title">Λιπομέτρηση - 13 Ιουνίου</div>
-  <ul>
-    <li>Βάρος: 101.0 kg</li>
-    <li>Fat Mass: 40.7 kg</li>
-    <li>Lean Mass: 58.5 kg</li>
-    <li>Skeletal Muscle: 39.6 kg</li>
-    <li>Visceral Fat Index: 19</li>
-  </ul>
-</div>
+ 
 <!-- 13 Ιουνίου -->
     <h3 class="day-title">13 Ιουνίου Σάββατο</h3>
 <p>γιαούρτι με 40γρ granola<br/>
@@ -618,7 +609,27 @@ protein pudding (20gr πρωτεΐνη)<br/>
 180γρ στήθος κοτόπουλο, 60γρ πατάτες</p>
 <div class="nutrition-line">Πρωτεΐνη: <span class="orange-val">~145 gr</span></div>
 <div class="nutrition-line">Θερμίδες: <span class="orange-val">~1450 kcal</span></div>
-
+<div class="summary-box">
+  <div class="summary-title">Σύνοψη εβδομάδας</div>
+  <ul>
+    <li>Σταθερή πρόσληψη πρωτεΐνης (~120–140gr/ημέρα), με έμφαση σε κοτόπουλο, ψάρι, μοσχάρι, αυγά και γαλακτοκομικά.</li>
+    <li>Συστηματική προπόνηση με βάρη και καλή συμμόρφωση στη διατροφή.</li>
+    <li>Ελεγχόμενη κατανάλωση υδατανθράκων, κυρίως από βρώμη, ψωμί, ρύζι, πατάτες, κριθαράκι και ζυμαρικά.</li>
+    <li>Καθημερινή παρουσία φρούτων, λαχανικών ή/και οσπρίων για φυτικές ίνες και μικροθρεπτικά συστατικά.</li>
+    <li>Η όρεξη αυξάνεται αισθητά την 7η–8η ημέρα μετά την ένεση Mounjaro και μετά από έντονη προπόνηση, αλλά παραμένει υπό έλεγχο με επιλογές υψηλής πρωτεΐνης.</li>
+    <li>Η συνολική πορεία παραμένει θετική, με σταδιακή απώλεια βάρους και διατήρηση της μυϊκής μάζας.</li>
+  </ul>
+</div>
+    <div class="lipometrisi-box">
+  <div class="lipometrisi-title">Λιπομέτρηση - 14 Ιουνίου</div>
+  <ul>
+    <li>Βάρος: 100.8 kg</li>
+    <li>Fat Mass: 40.3 kg</li>
+    <li>Lean Mass: 58.8 kg</li>
+    <li>Skeletal Muscle: 39.9 kg</li>
+    <li>Visceral Fat Index: 19</li>
+  </ul>
+</div>
 <!-- 14 Ιουνίου -->
 <!-- ΤΕΛΟΣ ΗΜΕΡΟΛΟΓΙΟΥ -->
 <div id="last-entry"></div>
@@ -633,7 +644,7 @@ protein pudding (20gr πρωτεΐνη)<br/>
 <canvas id="bodyChart" style="height:300px;"></canvas>
 
 <script>
-const labels = ['9 Απρ','25 Απρ','2 Μαΐ','9 Μαΐ','16 Μαΐ','23 Μαΐ','30 Μαΐ' ,'7 Ιουν'];
+const labels = ['9 Απρ','25 Απρ','2 Μαΐ','9 Μαΐ','16 Μαΐ','23 Μαΐ','30 Μαΐ' ,'7 Ιουν','14 Ιουν'];
 
 new Chart(document.getElementById('weightChart'), {
     type: 'line',
@@ -642,13 +653,13 @@ new Chart(document.getElementById('weightChart'), {
         datasets: [
             {
                 label: 'Βάρος (kg)',
-                data: [107.2,105.3,104.3,103.6,102.9,102,102.5, 101.6],
+                data: [107.2,105.3,104.3,103.6,102.9,102,102.5, 101.6,100.8],
                 borderColor: 'black',
                 tension: 0.3
             },
             {
                 label: 'Lean Mass (kg)',
-                data: [60.0,59.3,59.1,59.0,59.1,58.8,59, 58.7],
+                data: [60.0,59.3,59.1,59.0,59.1,58.8,59, 58.7,58.8],
                 borderColor: 'blue',
                 tension: 0.3
             }
@@ -676,13 +687,13 @@ new Chart(document.getElementById('bodyChart'), {
         datasets: [
             {
                 label: 'Skeletal Muscle (kg)',
-                data: [40.5,40.3,40.1,40.1,40.1,40,40.1,39.9],
+                data: [40.5,40.3,40.1,40.1,40.1,40,40.1,39.9,39.9],
                 borderColor: 'green',
                 tension: 0.3
             },
             {
                 label: 'Fat Mass (kg)',
-                data: [42.8,42.5,42.3,42.0,41.5,41.3,41,40.9],
+                data: [42.8,42.5,42.3,42.0,41.5,41.3,41,40.9,40.3],
                 borderColor: 'red',
                 tension: 0.3
             }
