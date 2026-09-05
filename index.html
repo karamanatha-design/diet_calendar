@@ -1991,6 +1991,7 @@ Protein pudding (176kcal, 20gr Protein)<br/>
 
 <canvas id="weightChart" style="height:300px;"></canvas>
 <canvas id="bodyChart" style="height:300px;"></canvas>
+    <canvas id="fatBmiChart" style="height:300px;"></canvas>
 
     <script>
 // === DATA: one object per measurement date — add new entries here only ===
@@ -2063,6 +2064,51 @@ new Chart(document.getElementById('bodyChart'), {
     ]
   },
   options: commonOptions,
+  plugins: [ChartDataLabels]
+});
+        // === Derived: Body Fat % and BMI (no manual entries needed) ===
+const HEIGHT_M = 1.71;
+
+const fatPercentData = measurements.map(m => +(m.fat / m.weight * 100).toFixed(1));
+const bmiData = measurements.map(m => +(m.weight / (HEIGHT_M * HEIGHT_M)).toFixed(1));
+
+new Chart(document.getElementById('fatBmiChart'), {
+  type: 'line',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: 'Body Fat %',
+        data: fatPercentData,
+        borderColor: 'red',
+        tension: 0.3,
+        yAxisID: 'yFat'
+      },
+      {
+        label: 'BMI',
+        data: bmiData,
+        borderColor: 'purple',
+        tension: 0.3,
+        yAxisID: 'yBmi'
+      }
+    ]
+  },
+  options: {
+    ...commonOptions,
+    scales: {
+      yFat: {
+        type: 'linear',
+        position: 'left',
+        title: { display: true, text: 'Body Fat %' }
+      },
+      yBmi: {
+        type: 'linear',
+        position: 'right',
+        title: { display: true, text: 'BMI' },
+        grid: { drawOnChartArea: false }
+      }
+    }
+  },
   plugins: [ChartDataLabels]
 });
     </script>
