@@ -3296,17 +3296,18 @@ new Chart(document.getElementById('fatBmiChart'), {
   options: {
     ...commonOptions,
     scales: {
-      yFat: {
-        type: 'linear',
-        position: 'right',
-        title: { display: true, text: 'Body Fat %' }
-      },
-      yBmi: {
+     yBmi: {
         type: 'linear',
         position: 'left',
         title: { display: true, text: 'BMI' },
         grid: { drawOnChartArea: false }
+      },
+        yFat: {
+        type: 'linear',
+        position: 'right',
+        title: { display: true, text: 'Body Fat %' }
       }
+     
     }
   },
   plugins: [ChartDataLabels]
